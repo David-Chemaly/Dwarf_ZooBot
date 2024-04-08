@@ -1,6 +1,7 @@
 # Ignore repositories starting with ZOO or SAM
 ZOO*
 SAM*
+wandb*
 
 # Ignore files with .ckpt extension
 *.ckpt
