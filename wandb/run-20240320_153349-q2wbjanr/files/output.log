@@ -1,0 +1,12 @@
+/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:653: Checkpoint directory /Users/davidchemaly/Documents/Cambridge/PhD_Projects/Dwarf_ZooBot/ZOO-e100-lr0.0001-bs1-seed42 exists and is not empty.
+  | Name      | Type         | Params
+-------------------------------------------
+0 | ZOO_model | EfficientNet | 5.3 M
+1 | fc1       | Linear       | 2.0 K
+-------------------------------------------
+5.3 M     Trainable params
+0         Non-trainable params
+5.3 M     Total params
+21.162    Total estimated model params size (MB)
+
+Sanity Checking DataLoader 0:   0%|                                                                                                                                                                          | 0/1 [00:00<?, ?it/s]tensor([[-0.0135,  0.0122]], device='mps:0')

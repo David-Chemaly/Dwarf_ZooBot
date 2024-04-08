@@ -1,0 +1,43 @@
+{
+    "os": "macOS-13.4.1-arm64-arm-64bit",
+    "python": "3.10.14",
+    "heartbeatAt": "2024-04-07T10:12:05.729510",
+    "startedAt": "2024-04-07T10:12:05.029436",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/Users/davidchemaly/Documents/Cambridge/PhD_Projects/Dwarf_ZooBot/ZOO_lightning.py",
+    "codePathLocal": "ZOO_lightning.py",
+    "codePath": "ZOO_lightning.py",
+    "host": "dhcp-10-248-2-229.eduroam.wireless.private.cam.ac.uk",
+    "username": "davidchemaly",
+    "executable": "/Users/davidchemaly/miniforge3/envs/Torch/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3204,
+        "min": 600,
+        "max": 3204
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3204,
+            "min": 600,
+            "max": 3204
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 460.4317207336426,
+            "used": 419.3776435852051
+        }
+    },
+    "gpuapple": {
+        "type": "arm",
+        "vendor": "Apple"
+    },
+    "memory": {
+        "total": 16.0
+    }
+}

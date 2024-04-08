@@ -1,0 +1,705 @@
+2024-04-07 11:41:05,710 INFO    StreamThr :39382 [internal.py:wandb_internal():86] W&B internal server running at pid: 39382, started at: 2024-04-07 11:41:05.709634
+2024-04-07 11:41:05,712 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status
+2024-04-07 11:41:05,713 INFO    WriterThread:39382 [datastore.py:open_for_write():87] open: ./wandb/run-20240407_114105-illa6bel/run-illa6bel.wandb
+2024-04-07 11:41:05,716 DEBUG   SenderThread:39382 [sender.py:send():382] send: header
+2024-04-07 11:41:05,716 DEBUG   SenderThread:39382 [sender.py:send():382] send: run
+2024-04-07 11:41:05,719 INFO    SenderThread:39382 [sender.py:_maybe_setup_resume():763] checking resume status for None/dwarf_galaxies_ZOO_BinaryClassification/illa6bel
+2024-04-07 11:41:06,325 INFO    SenderThread:39382 [dir_watcher.py:__init__():211] watching files in: ./wandb/run-20240407_114105-illa6bel/files
+2024-04-07 11:41:06,325 INFO    SenderThread:39382 [sender.py:_start_run_threads():1136] run started: illa6bel with start time 1712486465.709628
+2024-04-07 11:41:06,338 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: check_version
+2024-04-07 11:41:06,338 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: check_version
+2024-04-07 11:41:06,412 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: run_start
+2024-04-07 11:41:06,421 DEBUG   HandlerThread:39382 [system_info.py:__init__():27] System info init
+2024-04-07 11:41:06,421 DEBUG   HandlerThread:39382 [system_info.py:__init__():42] System info init done
+2024-04-07 11:41:06,421 INFO    HandlerThread:39382 [system_monitor.py:start():194] Starting system monitor
+2024-04-07 11:41:06,422 INFO    SystemMonitor:39382 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-04-07 11:41:06,422 INFO    HandlerThread:39382 [system_monitor.py:probe():214] Collecting system info
+2024-04-07 11:41:06,423 DEBUG   HandlerThread:39382 [system_info.py:probe():151] Probing system
+2024-04-07 11:41:06,424 INFO    SystemMonitor:39382 [interfaces.py:start():190] Started cpu monitoring
+2024-04-07 11:41:06,425 INFO    SystemMonitor:39382 [interfaces.py:start():190] Started disk monitoring
+2024-04-07 11:41:06,425 INFO    SystemMonitor:39382 [interfaces.py:start():190] Started gpuapple monitoring
+2024-04-07 11:41:06,426 INFO    SystemMonitor:39382 [interfaces.py:start():190] Started memory monitoring
+2024-04-07 11:41:06,435 INFO    SystemMonitor:39382 [interfaces.py:start():190] Started network monitoring
+2024-04-07 11:41:06,437 DEBUG   HandlerThread:39382 [gitlib.py:_init_repo():56] git repository is invalid
+2024-04-07 11:41:06,437 DEBUG   HandlerThread:39382 [system_info.py:probe():199] Probing system done
+2024-04-07 11:41:06,438 DEBUG   HandlerThread:39382 [system_monitor.py:probe():223] {'os': 'macOS-13.4.1-arm64-arm-64bit', 'python': '3.10.14', 'heartbeatAt': '2024-04-07T10:41:06.423833', 'startedAt': '2024-04-07T10:41:05.702777', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/Users/davidchemaly/Documents/Cambridge/PhD_Projects/Dwarf_ZooBot/ZOO_lightning.py', 'codePathLocal': 'ZOO_lightning.py', 'codePath': 'ZOO_lightning.py', 'host': 'dhcp-10-248-2-229.eduroam.wireless.private.cam.ac.uk', 'username': 'davidchemaly', 'executable': '/Users/davidchemaly/miniforge3/envs/Torch/bin/python', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3204, 'min': 600, 'max': 3204}, 'cpu_freq_per_core': [{'current': 3204, 'min': 600, 'max': 3204}], 'disk': {'/': {'total': 460.4317207336426, 'used': 419.38117599487305}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 16.0}}
+2024-04-07 11:41:06,438 INFO    HandlerThread:39382 [system_monitor.py:probe():224] Finished collecting system info
+2024-04-07 11:41:06,438 INFO    HandlerThread:39382 [system_monitor.py:probe():227] Publishing system info
+2024-04-07 11:41:06,438 DEBUG   HandlerThread:39382 [system_info.py:_save_conda():208] Saving list of conda packages installed into the current environment
+2024-04-07 11:41:07,332 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/conda-environment.yaml
+2024-04-07 11:41:07,748 DEBUG   HandlerThread:39382 [system_info.py:_save_conda():220] Saving conda packages done
+2024-04-07 11:41:07,749 INFO    HandlerThread:39382 [system_monitor.py:probe():229] Finished publishing system info
+2024-04-07 11:41:07,753 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:41:07,754 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-metadata.json with policy now
+2024-04-07 11:41:07,761 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: python_packages
+2024-04-07 11:41:07,761 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: python_packages
+2024-04-07 11:41:07,762 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:41:07,762 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:41:07,765 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:41:08,010 DEBUG   SenderThread:39382 [sender.py:send():382] send: telemetry
+2024-04-07 11:41:08,011 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:41:08,011 DEBUG   SenderThread:39382 [sender.py:send():382] send: telemetry
+2024-04-07 11:41:08,011 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:41:08,011 WARNING SenderThread:39382 [sender.py:send_metric():1354] Seen metric with glob (shouldn't happen)
+2024-04-07 11:41:08,012 DEBUG   SenderThread:39382 [sender.py:send():382] send: config
+2024-04-07 11:41:08,334 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/conda-environment.yaml
+2024-04-07 11:41:08,334 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/requirements.txt
+2024-04-07 11:41:08,334 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:41:08,335 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/wandb-metadata.json
+2024-04-07 11:41:08,396 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/5qnf6rkb-wandb-metadata.json
+2024-04-07 11:41:10,343 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:41:11,023 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:41:16,047 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:41:21,067 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:41:22,764 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:41:22,764 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:41:22,767 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:41:26,953 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:41:31,975 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:41:37,003 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:41:37,475 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/config.yaml
+2024-04-07 11:41:37,768 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:41:37,768 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:41:37,770 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:41:42,960 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:41:48,429 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:41:48,521 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:41:50,525 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:41:52,910 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:41:52,911 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:41:52,911 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:41:54,131 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:41:56,901 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:41:56,902 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_0_f442910c2701ee6fe88f.png with policy now
+2024-04-07 11:41:56,921 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:41:56,924 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:41:56,924 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:41:56,924 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:41:56,924 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:41:56,924 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:41:56,924 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:41:56,924 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:41:56,925 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:41:56,925 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:41:56,926 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:41:57,272 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/sjou7xe5-media/images/confusion_matrix_0_f442910c2701ee6fe88f.png
+2024-04-07 11:41:57,555 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_0_f442910c2701ee6fe88f.png
+2024-04-07 11:41:57,556 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:41:57,556 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media
+2024-04-07 11:41:57,556 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:41:58,062 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/w08arrb8-media/images/confusion_matrix_0_f442910c2701ee6fe88f.png
+2024-04-07 11:41:58,561 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:41:59,963 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:04,981 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:06,441 DEBUG   SystemMonitor:39382 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-07 11:42:06,442 DEBUG   SenderThread:39382 [sender.py:send():382] send: telemetry
+2024-04-07 11:42:06,443 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:42:07,777 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:42:07,777 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:42:07,912 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:42:10,012 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:10,618 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/config.yaml
+2024-04-07 11:42:15,193 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:20,206 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:22,781 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:42:22,782 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:42:22,916 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:42:26,025 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:31,044 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:36,448 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:42:36,448 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:36,725 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:42:37,786 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:42:37,786 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:42:37,921 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:42:41,941 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:46,773 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:42:46,972 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:48,781 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:42:50,791 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:42:51,990 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:52,791 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:42:52,791 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:42:52,802 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:42:52,926 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:42:54,807 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:42:56,816 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:42:57,029 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:42:58,827 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:00,838 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:02,073 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:02,846 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:04,851 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:06,450 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:43:06,574 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:43:06,574 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_1_70f682d341786cf750c8.png with policy now
+2024-04-07 11:43:06,584 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:43:06,585 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:43:06,585 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:43:06,586 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:43:06,588 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:43:06,589 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:43:06,589 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:43:06,589 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:43:06,589 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:43:06,589 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:43:06,888 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:43:06,888 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:06,889 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_1_70f682d341786cf750c8.png
+2024-04-07 11:43:06,889 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:43:06,975 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/h6nip8sl-media/images/confusion_matrix_1_70f682d341786cf750c8.png
+2024-04-07 11:43:07,489 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/cvmwg23f-media/images/confusion_matrix_1_70f682d341786cf750c8.png
+2024-04-07 11:43:07,591 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:07,798 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:43:07,799 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:43:07,933 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:43:08,415 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: log_artifact
+2024-04-07 11:43:08,416 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: log_artifact
+2024-04-07 11:43:08,420 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:43:08,897 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:10,071 INFO    SenderThread:39382 [sender.py:send_request_log_artifact():1470] logged artifact model-illa6bel - {'id': 'QXJ0aWZhY3Q6Nzg3MDU5Nzk4', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE1ODg5NTg3OA==', 'latestArtifact': None}}
+2024-04-07 11:43:10,071 DEBUG   SenderThread:39382 [sender.py:send():382] send: metric
+2024-04-07 11:43:10,072 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:43:10,072 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:43:10,072 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:43:10,908 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:43:12,655 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:12,916 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/config.yaml
+2024-04-07 11:43:12,917 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:14,927 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:15,389 INFO    wandb-upload_0:39382 [upload_job.py:push():89] Uploaded file /Users/davidchemaly/Library/Application Support/wandb/artifacts/staging/tmp5oubmsrj
+2024-04-07 11:43:16,938 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:17,980 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:18,945 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:20,955 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:22,800 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:43:22,800 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:43:22,935 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:43:22,966 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:23,004 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:24,975 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:26,983 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:28,061 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:28,993 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:30,894 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:43:30,894 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_4_4761e3f15bab0f1663ff.png with policy now
+2024-04-07 11:43:30,906 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:43:30,907 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:43:30,908 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:43:30,909 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:43:30,910 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:43:30,910 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:43:30,910 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:43:30,910 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:43:30,979 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:43:30,980 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:43:30,980 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:43:30,980 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:43:30,999 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:43:30,999 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:31,000 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_4_4761e3f15bab0f1663ff.png
+2024-04-07 11:43:31,000 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:43:31,285 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/x34nwj82-media/images/confusion_matrix_4_4761e3f15bab0f1663ff.png
+2024-04-07 11:43:31,858 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/jej4m3ay-media/images/confusion_matrix_4_4761e3f15bab0f1663ff.png
+2024-04-07 11:43:33,008 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:33,066 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:35,015 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:36,451 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:43:37,025 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:37,802 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:43:37,804 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:43:37,939 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:43:38,145 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:39,035 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:41,042 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:43,045 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:43,205 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:45,056 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:47,063 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:48,284 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:49,071 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:51,080 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:52,806 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:43:52,807 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:43:52,939 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:43:53,091 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:53,273 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:43:53,273 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_7_5a5e59aec83baec33b2f.png with policy now
+2024-04-07 11:43:53,283 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:43:53,284 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:43:53,284 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:43:53,284 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:43:53,284 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:43:53,286 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:43:53,286 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:43:53,286 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:53,287 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:43:53,316 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:43:53,317 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:43:53,317 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:43:53,317 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:43:53,668 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/7j9lsn0a-media/images/confusion_matrix_7_5a5e59aec83baec33b2f.png
+2024-04-07 11:43:54,093 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:43:54,093 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_7_5a5e59aec83baec33b2f.png
+2024-04-07 11:43:54,093 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:43:54,591 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/e6pjii72-media/images/confusion_matrix_7_5a5e59aec83baec33b2f.png
+2024-04-07 11:43:55,098 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:57,108 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:43:58,365 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:43:59,119 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:01,128 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:03,139 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:03,422 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:05,150 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:06,453 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:44:07,157 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:07,809 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:44:07,809 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:44:07,944 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:44:08,485 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:09,164 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:11,176 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:13,188 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:13,495 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:15,199 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:15,504 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:44:15,504 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_10_ec0a943f2c52c4854b34.png with policy now
+2024-04-07 11:44:15,514 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:44:15,514 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:44:15,514 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:44:15,515 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:44:15,515 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:44:15,516 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:44:15,516 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:44:15,517 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:44:15,545 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:44:15,545 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:44:15,546 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:44:15,547 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:44:15,889 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/7y43y1lt-media/images/confusion_matrix_10_ec0a943f2c52c4854b34.png
+2024-04-07 11:44:16,204 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:44:16,205 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_10_ec0a943f2c52c4854b34.png
+2024-04-07 11:44:16,205 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:44:16,668 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/6z1d2jwo-media/images/confusion_matrix_10_ec0a943f2c52c4854b34.png
+2024-04-07 11:44:17,210 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:18,518 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:19,217 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:21,228 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:22,814 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:44:22,814 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:44:22,949 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:44:23,233 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:23,639 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:25,239 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:27,246 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:28,755 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:29,256 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:31,268 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:33,275 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:33,812 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:35,286 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:36,458 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:44:37,295 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:37,719 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:44:37,719 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_13_ec0a943f2c52c4854b34.png with policy now
+2024-04-07 11:44:37,730 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:44:37,730 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:44:37,730 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:44:37,731 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:44:37,731 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:44:37,732 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:44:37,732 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:44:37,733 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:44:37,765 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:44:37,767 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:44:37,767 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:44:37,768 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:44:37,817 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:44:37,818 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:44:37,953 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:44:38,091 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/7psz0det-media/images/confusion_matrix_13_ec0a943f2c52c4854b34.png
+2024-04-07 11:44:38,300 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:44:38,301 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_13_ec0a943f2c52c4854b34.png
+2024-04-07 11:44:38,301 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:44:38,827 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/hgddcrac-media/images/confusion_matrix_13_ec0a943f2c52c4854b34.png
+2024-04-07 11:44:38,827 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:39,302 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:41,311 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:43,322 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:43,911 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:45,333 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:47,343 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:48,988 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:49,350 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:51,361 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:52,822 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:44:52,822 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:44:52,957 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:44:53,363 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:54,069 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:55,374 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:57,385 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:44:59,071 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:44:59,392 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:00,040 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:45:00,040 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_16_5a5e59aec83baec33b2f.png with policy now
+2024-04-07 11:45:00,050 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:45:00,051 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:45:00,052 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:45:00,052 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:45:00,052 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:45:00,054 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:45:00,054 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:45:00,054 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:45:00,085 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:45:00,086 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:45:00,086 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:45:00,087 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:45:00,395 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:45:00,395 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_16_5a5e59aec83baec33b2f.png
+2024-04-07 11:45:00,396 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:45:00,432 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/yb300k4p-media/images/confusion_matrix_16_5a5e59aec83baec33b2f.png
+2024-04-07 11:45:00,944 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/zs306jld-media/images/confusion_matrix_16_5a5e59aec83baec33b2f.png
+2024-04-07 11:45:01,400 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:03,411 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:04,199 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:05,422 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:06,463 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:45:07,432 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:07,826 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:45:07,827 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:45:07,959 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:45:09,240 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:09,442 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:11,450 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:13,469 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:14,242 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:15,475 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:17,484 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:19,320 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:19,494 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:21,502 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:22,359 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:45:22,359 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_19_ec0a943f2c52c4854b34.png with policy now
+2024-04-07 11:45:22,370 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:45:22,370 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:45:22,371 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:45:22,371 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:45:22,371 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:45:22,372 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:45:22,372 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:45:22,373 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:45:22,402 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:45:22,402 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:45:22,403 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:45:22,403 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:45:22,508 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:45:22,508 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_19_ec0a943f2c52c4854b34.png
+2024-04-07 11:45:22,508 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:45:22,764 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/4hycb1b3-media/images/confusion_matrix_19_ec0a943f2c52c4854b34.png
+2024-04-07 11:45:22,829 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:45:22,829 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:45:22,959 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:45:23,224 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/4dhbi4ra-media/images/confusion_matrix_19_ec0a943f2c52c4854b34.png
+2024-04-07 11:45:23,509 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:24,368 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:25,517 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:27,523 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:29,477 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:29,530 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:31,536 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:33,552 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:34,587 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:35,563 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:36,469 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:45:37,574 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:37,834 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:45:37,834 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:45:37,964 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:45:39,583 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:39,682 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:41,592 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:43,596 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:44,715 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:45:44,716 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_22_46d4bcfd7228672320fe.png with policy now
+2024-04-07 11:45:44,716 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:44,725 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:45:44,726 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:45:44,726 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:45:44,727 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:45:44,727 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:45:44,728 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:45:44,728 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:45:44,729 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:45:44,759 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:45:44,760 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:45:44,760 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:45:44,761 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:45:45,180 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/mro5i9fz-media/images/confusion_matrix_22_46d4bcfd7228672320fe.png
+2024-04-07 11:45:45,602 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:45:45,603 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:45,603 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_22_46d4bcfd7228672320fe.png
+2024-04-07 11:45:45,603 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:45:46,092 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/5rrk7xng-media/images/confusion_matrix_22_46d4bcfd7228672320fe.png
+2024-04-07 11:45:47,613 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:49,624 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:49,807 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:51,632 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:52,836 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:45:52,836 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:45:52,970 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:45:53,635 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:54,853 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:45:55,646 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:57,654 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:59,665 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:45:59,853 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:01,674 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:03,682 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:04,930 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:05,690 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:06,479 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:46:07,065 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:46:07,065 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_25_5a5e59aec83baec33b2f.png with policy now
+2024-04-07 11:46:07,074 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:46:07,075 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:46:07,075 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:46:07,075 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:46:07,076 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:46:07,077 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:46:07,077 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:46:07,077 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:46:07,106 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:46:07,107 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:46:07,107 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:46:07,108 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:46:07,503 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/hxoq6prb-media/images/confusion_matrix_25_5a5e59aec83baec33b2f.png
+2024-04-07 11:46:07,702 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:46:07,702 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:07,703 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_25_5a5e59aec83baec33b2f.png
+2024-04-07 11:46:07,703 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:46:07,840 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:46:07,840 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:46:07,974 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:46:08,164 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/iyh02dco-media/images/confusion_matrix_25_5a5e59aec83baec33b2f.png
+2024-04-07 11:46:09,711 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:09,952 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:11,727 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:13,740 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:15,078 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:15,757 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:17,770 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:19,790 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:20,182 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:21,802 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:22,844 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:46:22,844 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:46:22,984 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:46:23,821 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:25,253 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:25,832 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:27,838 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:29,325 DEBUG   SenderThread:39382 [sender.py:send():382] send: files
+2024-04-07 11:46:29,326 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file media/images/confusion_matrix_28_58d73ca4213a8d5eaff0.png with policy now
+2024-04-07 11:46:29,335 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:46:29,336 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:46:29,336 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:46:29,336 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:46:29,336 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:46:29,337 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:46:29,337 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:46:29,338 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:46:29,368 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-07 11:46:29,369 DEBUG   SenderThread:39382 [sender.py:send():382] send: history
+2024-04-07 11:46:29,369 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: summary_record
+2024-04-07 11:46:29,369 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:46:29,689 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/sis4ozvi-media/images/confusion_matrix_28_58d73ca4213a8d5eaff0.png
+2024-04-07 11:46:29,850 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:46:29,851 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:29,851 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_created():271] file/dir created: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_28_58d73ca4213a8d5eaff0.png
+2024-04-07 11:46:29,851 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/media/images
+2024-04-07 11:46:30,345 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file /var/folders/bz/ftchh2fx1mzg7zrsqk32mjp40000gn/T/tmpa6_aw3dlwandb/zoe2b7cg-media/images/confusion_matrix_28_58d73ca4213a8d5eaff0.png
+2024-04-07 11:46:30,376 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:30,863 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:31,877 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:46:35,408 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:36,487 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:46:37,850 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:46:37,851 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:46:37,980 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:46:41,012 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:46,052 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:51,091 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:46:52,860 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:46:52,861 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:46:52,992 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:46:56,193 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:47:01,238 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:47:06,272 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:47:06,495 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:47:07,861 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:47:07,862 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:47:07,992 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:47:12,056 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:47:17,088 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:47:22,136 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:47:22,875 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:47:22,876 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:47:23,004 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:47:28,055 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:47:33,081 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:47:36,505 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:47:37,882 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-07 11:47:37,882 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: stop_status
+2024-04-07 11:47:38,007 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:47:38,127 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:47:39,595 DEBUG   SenderThread:39382 [sender.py:send():382] send: telemetry
+2024-04-07 11:47:39,599 DEBUG   SenderThread:39382 [sender.py:send():382] send: exit
+2024-04-07 11:47:39,600 INFO    SenderThread:39382 [sender.py:send_exit():589] handling exit code: 0
+2024-04-07 11:47:39,600 INFO    SenderThread:39382 [sender.py:send_exit():591] handling runtime: 393
+2024-04-07 11:47:39,600 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:47:39,601 INFO    SenderThread:39382 [sender.py:send_exit():597] send defer
+2024-04-07 11:47:39,601 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:39,602 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 0
+2024-04-07 11:47:39,602 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:39,602 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-04-07 11:47:39,602 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 1
+2024-04-07 11:47:39,603 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:39,603 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 1
+2024-04-07 11:47:39,603 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:39,604 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-04-07 11:47:39,604 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 2
+2024-04-07 11:47:39,604 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:39,604 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 2
+2024-04-07 11:47:39,604 INFO    HandlerThread:39382 [system_monitor.py:finish():203] Stopping system monitor
+2024-04-07 11:47:39,605 DEBUG   SystemMonitor:39382 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-04-07 11:47:39,606 INFO    HandlerThread:39382 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-07 11:47:39,606 DEBUG   SystemMonitor:39382 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-04-07 11:47:39,606 INFO    HandlerThread:39382 [interfaces.py:finish():202] Joined disk monitor
+2024-04-07 11:47:39,608 INFO    HandlerThread:39382 [interfaces.py:finish():202] Joined gpuapple monitor
+2024-04-07 11:47:39,608 INFO    HandlerThread:39382 [interfaces.py:finish():202] Joined memory monitor
+2024-04-07 11:47:39,608 INFO    HandlerThread:39382 [interfaces.py:finish():202] Joined network monitor
+2024-04-07 11:47:39,609 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:39,609 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-04-07 11:47:39,609 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 3
+2024-04-07 11:47:39,609 DEBUG   SenderThread:39382 [sender.py:send():382] send: stats
+2024-04-07 11:47:39,610 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:39,610 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 3
+2024-04-07 11:47:39,611 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:39,611 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-04-07 11:47:39,611 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 4
+2024-04-07 11:47:39,611 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:39,611 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 4
+2024-04-07 11:47:39,611 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:39,611 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-04-07 11:47:39,612 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 5
+2024-04-07 11:47:39,612 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:39,612 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 5
+2024-04-07 11:47:39,612 DEBUG   SenderThread:39382 [sender.py:send():382] send: summary
+2024-04-07 11:47:39,613 INFO    SenderThread:39382 [sender.py:_save_file():1403] saving file wandb-summary.json with policy end
+2024-04-07 11:47:39,614 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:39,614 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-04-07 11:47:39,614 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 6
+2024-04-07 11:47:39,614 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:39,614 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 6
+2024-04-07 11:47:39,615 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:39,615 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-04-07 11:47:39,622 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: status_report
+2024-04-07 11:47:39,820 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 7
+2024-04-07 11:47:39,820 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:39,820 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 7
+2024-04-07 11:47:39,821 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:39,821 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-04-07 11:47:40,523 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:47:40,524 INFO    Thread-17 :39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/config.yaml
+2024-04-07 11:47:40,601 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-07 11:47:41,600 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 8
+2024-04-07 11:47:41,601 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: poll_exit
+2024-04-07 11:47:41,602 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:41,602 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 8
+2024-04-07 11:47:41,603 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:41,604 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-04-07 11:47:41,604 INFO    SenderThread:39382 [job_builder.py:build():296] Attempting to build job artifact
+2024-04-07 11:47:41,605 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-07 11:47:41,607 INFO    SenderThread:39382 [job_builder.py:_get_source_type():437] no source found
+2024-04-07 11:47:41,607 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 9
+2024-04-07 11:47:41,608 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: poll_exit
+2024-04-07 11:47:41,608 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:41,608 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 9
+2024-04-07 11:47:41,609 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:41,609 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 9
+2024-04-07 11:47:41,610 INFO    SenderThread:39382 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-07 11:47:42,548 INFO    SenderThread:39382 [dir_watcher.py:_on_file_modified():288] file/dir modified: ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:47:42,550 INFO    SenderThread:39382 [dir_watcher.py:finish():388] scan: ./wandb/run-20240407_114105-illa6bel/files
+2024-04-07 11:47:42,551 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/requirements.txt requirements.txt
+2024-04-07 11:47:42,551 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/output.log output.log
+2024-04-07 11:47:42,566 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/config.yaml config.yaml
+2024-04-07 11:47:42,569 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json wandb-summary.json
+2024-04-07 11:47:42,576 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/conda-environment.yaml conda-environment.yaml
+2024-04-07 11:47:42,582 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/wandb-metadata.json wandb-metadata.json
+2024-04-07 11:47:42,589 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_4_4761e3f15bab0f1663ff.png media/images/confusion_matrix_4_4761e3f15bab0f1663ff.png
+2024-04-07 11:47:42,589 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_28_58d73ca4213a8d5eaff0.png media/images/confusion_matrix_28_58d73ca4213a8d5eaff0.png
+2024-04-07 11:47:42,589 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_13_ec0a943f2c52c4854b34.png media/images/confusion_matrix_13_ec0a943f2c52c4854b34.png
+2024-04-07 11:47:42,590 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_0_f442910c2701ee6fe88f.png media/images/confusion_matrix_0_f442910c2701ee6fe88f.png
+2024-04-07 11:47:42,590 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_16_5a5e59aec83baec33b2f.png media/images/confusion_matrix_16_5a5e59aec83baec33b2f.png
+2024-04-07 11:47:42,590 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_25_5a5e59aec83baec33b2f.png media/images/confusion_matrix_25_5a5e59aec83baec33b2f.png
+2024-04-07 11:47:42,590 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_1_70f682d341786cf750c8.png media/images/confusion_matrix_1_70f682d341786cf750c8.png
+2024-04-07 11:47:42,591 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_10_ec0a943f2c52c4854b34.png media/images/confusion_matrix_10_ec0a943f2c52c4854b34.png
+2024-04-07 11:47:42,591 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_19_ec0a943f2c52c4854b34.png media/images/confusion_matrix_19_ec0a943f2c52c4854b34.png
+2024-04-07 11:47:42,591 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_7_5a5e59aec83baec33b2f.png media/images/confusion_matrix_7_5a5e59aec83baec33b2f.png
+2024-04-07 11:47:42,591 INFO    SenderThread:39382 [dir_watcher.py:finish():402] scan save: ./wandb/run-20240407_114105-illa6bel/files/media/images/confusion_matrix_22_46d4bcfd7228672320fe.png media/images/confusion_matrix_22_46d4bcfd7228672320fe.png
+2024-04-07 11:47:42,591 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 10
+2024-04-07 11:47:42,592 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:42,592 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 10
+2024-04-07 11:47:42,592 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:42,592 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 10
+2024-04-07 11:47:42,592 INFO    SenderThread:39382 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-07 11:47:42,607 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-07 11:47:42,608 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: poll_exit
+2024-04-07 11:47:42,939 INFO    wandb-upload_0:39382 [upload_job.py:push():131] Uploaded file ./wandb/run-20240407_114105-illa6bel/files/requirements.txt
+2024-04-07 11:47:43,013 INFO    wandb-upload_3:39382 [upload_job.py:push():131] Uploaded file ./wandb/run-20240407_114105-illa6bel/files/wandb-summary.json
+2024-04-07 11:47:43,017 INFO    wandb-upload_4:39382 [upload_job.py:push():131] Uploaded file ./wandb/run-20240407_114105-illa6bel/files/conda-environment.yaml
+2024-04-07 11:47:43,043 INFO    wandb-upload_2:39382 [upload_job.py:push():131] Uploaded file ./wandb/run-20240407_114105-illa6bel/files/config.yaml
+2024-04-07 11:47:43,050 INFO    wandb-upload_1:39382 [upload_job.py:push():131] Uploaded file ./wandb/run-20240407_114105-illa6bel/files/output.log
+2024-04-07 11:47:43,260 INFO    Thread-16 (_thread_body):39382 [sender.py:transition_state():617] send defer: 11
+2024-04-07 11:47:43,261 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:43,261 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 11
+2024-04-07 11:47:43,261 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:43,262 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 11
+2024-04-07 11:47:43,262 INFO    SenderThread:39382 [file_pusher.py:join():178] waiting for file pusher
+2024-04-07 11:47:43,266 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 12
+2024-04-07 11:47:43,266 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:43,266 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 12
+2024-04-07 11:47:43,267 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:43,267 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 12
+2024-04-07 11:47:43,267 INFO    SenderThread:39382 [file_stream.py:finish():595] file stream finish called
+2024-04-07 11:47:43,612 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-07 11:47:43,680 INFO    SenderThread:39382 [file_stream.py:finish():599] file stream finish is done
+2024-04-07 11:47:43,680 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 13
+2024-04-07 11:47:43,681 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: poll_exit
+2024-04-07 11:47:43,682 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:43,682 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 13
+2024-04-07 11:47:43,683 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:43,684 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 13
+2024-04-07 11:47:43,684 INFO    SenderThread:39382 [sender.py:transition_state():617] send defer: 14
+2024-04-07 11:47:43,685 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: defer
+2024-04-07 11:47:43,686 DEBUG   SenderThread:39382 [sender.py:send():382] send: final
+2024-04-07 11:47:43,686 INFO    HandlerThread:39382 [handler.py:handle_request_defer():172] handle defer: 14
+2024-04-07 11:47:43,686 DEBUG   SenderThread:39382 [sender.py:send():382] send: footer
+2024-04-07 11:47:43,687 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: defer
+2024-04-07 11:47:43,687 INFO    SenderThread:39382 [sender.py:send_request_defer():613] handle sender defer: 14
+2024-04-07 11:47:43,689 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-07 11:47:43,689 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: poll_exit
+2024-04-07 11:47:43,691 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-07 11:47:43,693 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: server_info
+2024-04-07 11:47:43,693 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: get_summary
+2024-04-07 11:47:43,694 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: server_info
+2024-04-07 11:47:43,694 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: sampled_history
+2024-04-07 11:47:43,703 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: job_info
+2024-04-07 11:47:43,819 DEBUG   SenderThread:39382 [sender.py:send_request():409] send_request: job_info
+2024-04-07 11:47:43,823 DEBUG   HandlerThread:39382 [handler.py:handle_request():146] handle_request: shutdown
+2024-04-07 11:47:43,824 INFO    HandlerThread:39382 [handler.py:finish():869] shutting down handler
+2024-04-07 11:47:44,714 INFO    WriterThread:39382 [datastore.py:close():296] close: ./wandb/run-20240407_114105-illa6bel/run-illa6bel.wandb
+2024-04-07 11:47:44,831 INFO    SenderThread:39382 [sender.py:finish():1572] shutting down sender
+2024-04-07 11:47:44,831 INFO    SenderThread:39382 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-07 11:47:44,831 INFO    SenderThread:39382 [file_pusher.py:join():178] waiting for file pusher

@@ -1,0 +1,57 @@
+/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:653: Checkpoint directory /Users/davidchemaly/Documents/Cambridge/PhD_Projects/Dwarf_ZooBot/ZOO-e10-lr0.0001-bs1-seed42 exists and is not empty.
+  | Name      | Type         | Params
+-------------------------------------------
+0 | ZOO_model | EfficientNet | 5.3 M
+1 | fc1       | Linear       | 1.0 K
+-------------------------------------------
+5.3 M     Trainable params
+0         Non-trainable params
+5.3 M     Total params
+21.158    Total estimated model params size (MB)
+Sanity Checking: |                                                                                                                             | 0/? [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/davidchemaly/Documents/Cambridge/PhD_Projects/Dwarf_ZooBot/ZOO_lightning.py", line 245, in <module>
+    trainer.fit(model, train_loader, valid_loader)
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 544, in fit
+    call._call_and_handle_interrupt(
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/trainer/call.py", line 44, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 580, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 987, in _run
+    results = self._run_stage()
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1031, in _run_stage
+    self._run_sanity_check()
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/trainer/trainer.py", line 1060, in _run_sanity_check
+    val_loop.run()
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/loops/utilities.py", line 182, in _decorator
+    return loop_run(self, *args, **kwargs)
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/loops/evaluation_loop.py", line 128, in run
+    batch, batch_idx, dataloader_idx = next(data_fetcher)
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/loops/fetchers.py", line 133, in __next__
+    batch = super().__next__()
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/loops/fetchers.py", line 60, in __next__
+    batch = next(self.iterator)
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/utilities/combined_loader.py", line 341, in __next__
+    out = next(self._iterator)
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/pytorch_lightning/utilities/combined_loader.py", line 142, in __next__
+    out = next(self.iterators[0])
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/torch/_utils.py", line 694, in reraise
+    raise exception
+IndexError: Caught IndexError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/Users/davidchemaly/miniforge3/envs/Torch/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 51, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/Users/davidchemaly/Documents/Cambridge/PhD_Projects/Dwarf_ZooBot/ZOO_lightning.py", line 100, in __getitem__
+    return image, label[:, None]
+IndexError: too many indices for tensor of dimension 0
