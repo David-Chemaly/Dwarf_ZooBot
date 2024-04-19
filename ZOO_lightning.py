@@ -156,8 +156,6 @@ class LitNeuralNet(pl.LightningModule):
         self.valid_step_outputs.clear()
 
         # Compute confusion matrix
-        print(np.array(self.validation_targets).shape)
-        print(np.array(self.validation_preds).shape)
         cm   = confusion_matrix(self.validation_targets, self.validation_preds)
         disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=['No Dwarf', 'Dwarf'])
         
@@ -182,7 +180,7 @@ if __name__ == '__main__':
     # Hyper-parameters
     SEED = 42
     EPOCHS = 10
-    BATCH_SIZE  = 2
+    BATCH_SIZE  = 1
     NUM_WORKERS = 7
     LEARNING_RATE = 1e-4
     OUTPUT_SIZE  = 1
@@ -202,8 +200,8 @@ if __name__ == '__main__':
     data_path = '/Volumes/ES-HDD-Documents/Documents/matlas_dwarfs'
 
     with h5py.File(f'{data_path}/NGC4249_224_patches.h5', 'r') as f:
-        patches_rgi   = f['data'][:5000] #[arg_dwarf[:5]]
-        patches_dwarf = f['dwarf'][:5000] #[arg_dwarf[:5]]
+        patches_rgi   = f['data'][:2000] 
+        patches_dwarf = f['dwarf'][:2000] 
     patches_bianry = (np.sum( patches_dwarf, axis=(1,2,3) ) != 0).astype(int)
 
     data_train, data_valid, label_train, label_valid = train_test_split(patches_rgi, patches_bianry, test_size=0.2, random_state=SEED)
