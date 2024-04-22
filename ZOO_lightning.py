@@ -104,7 +104,7 @@ class LitNeuralNet(pl.LightningModule):
     def __init__(self, ZOO_model, LEARNING_RATE, OUTPUT_SIZE):
         super(LitNeuralNet, self).__init__()
 
-        self.save_hyperparameters(ignore=['ZOO_model'])
+        # self.save_hyperparameters(ignore=['ZOO_model'])
 
         self.ZOO_model = ZOO_model
         self.fc1       = nn.Linear(1000, OUTPUT_SIZE) 
