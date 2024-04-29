@@ -23,12 +23,11 @@ from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import WandbLogger
 from pytorch_lightning.callbacks import ModelCheckpoint
 
+DTYPE      = torch.float32
 
-DTYPE = torch.float32
-
-### Initialize a W&B run ###
-wandb.login()
-wandb_logger = WandbLogger(project="dwarf_galaxies_ZOO_BinaryClassification", log_model="all")
+### Count Trainable Parameters ###
+def count_trainable_parameters(model):
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
 ### Pre-Processing function for SAM ###
 def pre(img):
@@ -48,25 +47,22 @@ def get_weighted_sampler(labels):
     return sampler
 
 ### Data Augmentation ###
-def segementation_transform(image):#, label):
-    """Apply the same transform to both image and label."""
+def segementation_transform(image):
+    """Apply the same transform to both image."""
     # Random horizontal flipping
     if torch.rand(1) < 0.5:
         image = TF.hflip(image)
-        # label = TF.hflip(label)
-    
+
     # Random vertical flipping
     if torch.rand(1) < 0.5:
         image = TF.vflip(image)
-        # label = TF.vflip(label)
     
     # Random rotation
     angle = torch.rand(1) * 270  # generates a random value between 0 and 270
     angle = torch.div(angle, 90, rounding_mode='floor') * 90  # snaps angle to 0, 90, 180, or 270 degrees
     image = TF.rotate(image, angle.item())
-    # label = TF.rotate(label, angle.item())
     
-    return image#, label
+    return image
 
 ### Dataset Class ###
 class SimpleDataset(Dataset):
@@ -98,13 +94,11 @@ class SimpleDataset(Dataset):
             image = self.transform(image)
 
         return image, label[None]
-    
+
 ### Lightning Module ###
 class LitNeuralNet(pl.LightningModule):
     def __init__(self, ZOO_model, LEARNING_RATE, OUTPUT_SIZE):
         super(LitNeuralNet, self).__init__()
-
-        # self.save_hyperparameters(ignore=['ZOO_model'])
 
         self.ZOO_model = ZOO_model
         self.fc1       = nn.Linear(1000, OUTPUT_SIZE) 
@@ -178,40 +172,51 @@ class LitNeuralNet(pl.LightningModule):
 
 if __name__ == '__main__':
     # Hyper-parameters
-    SEED = 42
-    EPOCHS = 10
-    BATCH_SIZE  = 1
-    NUM_WORKERS = 7
-    LEARNING_RATE = 1e-4
-    OUTPUT_SIZE  = 1
-    WEIGHTS_PATH = './effnetb0_color_224px.ckpt'
+    SEED          = 42
+    EPOCHS        = 100
+    BATCH_SIZE    = 256
+    NUM_WORKERS   = 7
+    LEARNING_RATE = 3e-4
+    OUTPUT_SIZE   = 1
 
-    # Configure the ModelCheckpoint callback
-    # This example saves the top 1 models based on validation loss
-    checkpoint_callback_valid = ModelCheckpoint(
-        monitor='valid_loss',
-        dirpath=f'./ZOO-e{EPOCHS}-lr{LEARNING_RATE}-bs{BATCH_SIZE}-seed{SEED}',
-        filename='ZOO-{epoch:02d}-{train_loss:.4f}-{valid_loss:.4f}',
-        save_top_k=1,
-        mode='min',
-    )
+    WEIGHTS_PATH    = './effnetb0_color_224px.ckpt'
 
-    # Load the Data
-    data_path = '/Volumes/ES-HDD-Documents/Documents/matlas_dwarfs'
+    DATA_TRAIN       = 'NGC4249'
+    DATA_TRAIN_PATH  = f'./{DATA_TRAIN}_224_patches_NO-Overlap_qty100.h5'
 
-    with h5py.File(f'{data_path}/NGC4249_224_patches.h5', 'r') as f:
-        patches_rgi   = f['data'][:2000] 
-        patches_dwarf = f['dwarf'][:2000] 
-    patches_bianry = (np.sum( patches_dwarf, axis=(1,2,3) ) != 0).astype(int)
+    DATA_VALID       = 'NGC5353'
+    DATA_VALID_PATH  = f'./{DATA_VALID}_224_patches_NO-Overlap_qty100.h5'
 
-    data_train, data_valid, label_train, label_valid = train_test_split(patches_rgi, patches_bianry, test_size=0.2, random_state=SEED)
+    ### Initialize a W&B run ###
+    project      = "dwarf_galaxies_ZOO_BinaryClassification"
+    api_key      = "c6ddb5279974942c45351cde8db32694af0a026e"
+    name         = f"Zoo_{DATA_VALID}_224_NO-Overlap"
+
+    wandb.login(key=api_key)
+    wandb.init(project=project, name=name)
+    wandb_logger = WandbLogger(project=project, name=name)
+
+
+    # Load the Train Data
+    with h5py.File(DATA_TRAIN_PATH, 'r') as f:
+        train_patches_rgi   = f['data'][:] 
+        train_patches_dwarf = f['dwarf'][:] 
+    train_patches_binary = (np.sum( train_patches_dwarf, axis=(1,2,3) ) != 0).astype(int)
+    data_train, label_train = train_patches_rgi, train_patches_binary
+
+    # Load the Valid Data
+    with h5py.File(DATA_VALID_PATH, 'r') as f:
+        valid_patches_rgi   = f['data'][:] 
+        valid_patches_dwarf = f['dwarf'][:] 
+    valid_patches_binary = (np.sum( valid_patches_dwarf, axis=(1,2,3) ) != 0).astype(int)
+    data_valid, label_valid = valid_patches_rgi, valid_patches_binary
 
     train_dataset = SimpleDataset(data_train, label_train, OUTPUT_SIZE, transform=segementation_transform, preprocess=pre)
     train_sampler = get_weighted_sampler(label_train)
     train_loader  = DataLoader(dataset=train_dataset, batch_size=BATCH_SIZE, num_workers=NUM_WORKERS, shuffle=False, persistent_workers=True, sampler=train_sampler)
 
     valid_dataset = SimpleDataset(data_valid, label_valid, OUTPUT_SIZE, transform=None, preprocess=pre)
-    valid_loader  = DataLoader(dataset=valid_dataset, batch_size=BATCH_SIZE, num_workers=NUM_WORKERS, shuffle=False, persistent_workers=True)
+    valid_loader  = DataLoader(dataset=valid_dataset, batch_size=BATCH_SIZE, num_workers=NUM_WORKERS, shuffle=False, persistent_workers=True, drop_last=True)
 
     # Load the Model
     ZOO_model = timm.create_model('efficientnet_b0', pretrained=False)
@@ -230,7 +235,31 @@ if __name__ == '__main__':
 
     ZOO_model.load_state_dict(adjusted_state_dict, strict=False)
 
-    model   = LitNeuralNet(ZOO_model, LEARNING_RATE, OUTPUT_SIZE)
-    trainer = Trainer(callbacks=[checkpoint_callback_valid], logger=wandb_logger, max_epochs=EPOCHS, log_every_n_steps=min(label_train.shape[0], 50))
+    # Make only the final classifier layer trainable
+    for name, param in ZOO_model.named_parameters():
+        if name == 'classifier.weight' or name == 'classifier.bias':
+            continue
+        else:
+            param.requires_grad = False
+
+    train_params = count_trainable_parameters(ZOO_model)
+
+    model = LitNeuralNet(ZOO_model, LEARNING_RATE, OUTPUT_SIZE)
+
+    # Configure the ModelCheckpoint callback
+    checkpoint_callback_valid = ModelCheckpoint(
+        monitor='valid_loss',
+        dirpath=f'./ZOO-{DATA_VALID}-e{EPOCHS}-lr{LEARNING_RATE}-bs{BATCH_SIZE}-params{train_params}-seed{SEED}',
+        filename='ZOO-{epoch:02d}-{train_loss:.4f}-{valid_loss:.4f}',
+        save_top_k=1,
+        mode='min',
+    )
+
+    # Train the model using PyTorch Lightning
+    trainer = Trainer(callbacks=[checkpoint_callback_valid], 
+                      logger=wandb_logger, 
+                      max_epochs=EPOCHS, 
+                      log_every_n_steps=min(label_train.shape[0], 50),
+                      accelerator='gpu', devices=1)
     trainer.fit(model, train_loader, valid_loader)
     wandb.finish()
